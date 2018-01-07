@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--Based off the 2014 form found here: http://www.killerwhaletales.org/pdfs/registration2010.pdf-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Killer Whale Tales Homework</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    </head>
+    <body>
+        <div class="top-container">
+            <form>
+                <div class="padded">
+                    <h1>Kids Making a Difference Now! Helping Orcas at Your Home</h1>
+                    <label for="first-name"><strong>First name:</strong></label>
+                    <input type="text" name="first-name" id="first-name"/>
+                    <p>
+                        It is up to us to do something for the whales and the planet. A great deal of what is affecting
+                        the orcas can be fixed if we are all willing to make some changes at our homes. Investigate
+                        your ecological “foot print” by filling out the sheet below. Try your best and make changes
+                        where you can. Record the results and return them to your teacher by the due date. Remember,
+                        even a little change, when added to what everyone else is doing, can add up quickly.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="column padded bordered">
+                        <h3 class="question-header">Recycling Facts</h3>
+                        <p>
+                            Packaging alone makes up 64 million tons by weight or 33% of all of our garbage. Last year
+                            alone King County residents threw away 4 pounds of trash per person each day! Recycling one
+                            aluminum can saves enough electricity to power your television for 3 hours. That’s a lot of
+                            hydroelectric power saved, which means more safe habitat for salmon and more food for
+                            whales.
+                        </p>
+                        <fieldset class="radiogroup">
+                            <legend class="question">Do you recycle?</legend>
+                            <div>
+                                <input type="radio" name="do-recycle" id="recycle-yes" value="Yes">
+                                <label for="recycle-yes">Yes</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" name="do-recycle" id="recycle-started-today"
+                                       value="I started today">
+                                <label for="recycle-started-today">I started today</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" name="do-recycle" id="recycle-sorry"
+                                       value="Sorry, there are no recycling centers in our area">
+                                <label for="recycle-sorry">Sorry, there are no recycling centers in our area</label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="question">If so, what do you recycle? (check all that apply)</legend>
+                            <div>
+                                <input type="checkbox" name="recycle-type" id="recycle-paper" value="paper">
+                                <label for="recycle-paper">Paper</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="recycle-type" id="recycle-plastics" value="plastics">
+                                <label for="recycle-plastics">Plastics</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="recycle-type" id="recycle-glass" value="glass">
+                                <label for="recycle-glass">Glass</label>
+                            </div>
+                            <div>
+                                <input type="checkbox"
+                                       name="recycle-type"
+                                       id="recycle-newspaper"
+                                       value="newspaper">
+                                <label for="recycle-newspaper">Newspaper</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="recycle-type" id="recycle-food" value="food">
+                                <label for="recycle-food">Food (worm bin?)</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="recycle-type" id="recycle-cans" value="cans">
+                                <label for="recycle-cans">Cans</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="column padded bordered">
+                        <h3 class="question-header">Organic Food Facts</h3>
+                        <p>
+                            Organic food is produced using sustainable agricultural production practices. Not permitted
+                            are most conventional pesticides; fertilizers made with synthetic ingredients, or sewage
+                            sludge; bioengineering; or ionizing radiation. Organic meat, poultry eggs, and dairy
+                            products come from animals that are given no antibiotics or growth hormones. The USDA
+                            National Organic Program website has more information including inspection and
+                            certification information
+                        </p>
+                        <fieldset>
+                            <legend class="question">
+                                Checkout the food in your fridge and kitchen cabinets. Do you use products that have
+                                this label on the packaging?
+                            </legend>
+                            <img src="images/USDA_organic_seal.svg" alt="USDA organic seal" width="50vw">
+                            <input type="radio" name="use-organic" id="organic-yes" value="Yes">
+                            <label for="organic-yes">Yes</label>
+                            <input type="radio" name="use-organic" id="organic-no" value="No">
+                            <label for="organic-no">No</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="question">
+                                On your next shopping trip can you replace at least one of your normal food purchases
+                                with an organic product?
+                            </legend>
+                            <input type="radio" name="will-replace-organic" id="shopping-yes" value="Yes">
+                            <label for="shopping-yes">Yes</label>
+                            <input type="radio" name="will-replace-organic" id="shopping-no" value="No">
+                            <label for="shopping-no">No</label>
+                            <input type="radio" name="will-replace-organic" id="shopping-will-now"
+                                   value="We will form now on">
+                            <label for="shopping-will-now">We will from now on</label>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="padded bordered">
+                    <h3 class="question-header">Recycle/Chlorine Paper Facts</h3>
+                    <p>
+                        If every household in the US replaced just <strong>one</strong> 12 pack of virgin fiber
+                        bathroom tissue with 100% recycled ones we could save 4.4 million trees and avoid 275,000
+                        pounds of pollution! More trees means more habitat for salmon, which are orcas’ main food
+                        source. Bleaching paper with chlorine compounds to make it whiter is one of the largest
+                        causes of toxic pollution in Washington State. This toxic contaminant is called Dioxin and is
+                        one of the most toxic chemicals known to man. Dioxin causes all sorts of immunological and
+                        reproductive problems in mammals.
+                    </p>
+                    <fieldset>
+                        <legend class="question">
+                            Check the packaging on the paper products in your home. Do the products you use say
+                            “chlorine free/ made with post consumer” or have this label on the packaging?
+                        </legend>
+                        <img src="images/Recycling_symbol.svg" alt="Recycling symbol" width="50vw">
+                        <input type="radio" name="use-chlorine-free" id="chlorine-free-yes" value="Yes">
+                        <label for="chlorine-free-yes">Yes</label>
+                        <input type="radio" name="use-chlorine-free" id="chlorine-free-no" value="No">
+                        <label for="chlorine-free-no">No</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="question">
+                            On your next shopping trip can you replace at least one of your normal paper purchase
+                            with a chlorine free/recycled product?
+                        </legend>
+                        <input type="radio" name="will-replace-chlorine" id="replace-chlorine-yes" value="Yes">
+                        <label for="replace-chlorine-yes">Yes</label>
+                        <input type="radio" name="will-replace-chlorine" id="replace-chlorine-no" value="No">
+                        <label for="replace-chlorine-no">No</label>
+                        <input type="radio" name="will-replace-chlorine" id="replace-chlorine-will-now"
+                               value="We will from now on">
+                        <label for="replace-chlorine-will-now">We will from now on</label>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

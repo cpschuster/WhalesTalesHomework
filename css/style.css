@@ -1,0 +1,49 @@
+.padded {
+    padding: 1vw;
+}
+
+.bordered {
+    border-width: 1px;
+    border-style: solid;
+}
+
+.top-container {
+    margin: auto;
+}
+
+.column {
+    display: table-cell;
+}
+
+.row {
+    display: table;
+    width: 100%;
+}
+
+.question-header {
+    background-color: black;
+    color: white;
+}
+
+.question {
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .column {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .top-container {
+        width: 1200px;
+    }
+    .column {
+        width: 540px;
+    }
+    .padded {
+        padding: 12px;
+    }
+}
