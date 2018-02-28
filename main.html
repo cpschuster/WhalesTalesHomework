@@ -1,160 +1,406 @@
 <!DOCTYPE html>
-<!--Based off the 2014 form found here: http://www.killerwhaletales.org/pdfs/registration2010.pdf-->
 <html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Killer Whale Tales Homework</title>
+        <link href="css/reset.css" rel="stylesheet" type="text/css" media="all">
         <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
     </head>
     <body>
-        <div class="top-container">
-            <form>
-                <div class="padded">
-                    <h1>Kids Making a Difference Now! Helping Orcas at Your Home</h1>
+        <form>
+            <div class="top-container">
+                <span class="image">Insert Killer Whale Here:
+                    <img src="images/Black_Box.svg" alt="Replace This With Real Logo" height="100%">
+                </span>
+                <h1 class="title">Kids Making a Difference Now!
+                    <br>
+                    Helping SRKW’s At Your Home
+                </h1>
+                <div class="intro">
                     <label for="first-name"><strong>First name:</strong></label>
                     <input type="text" name="first-name" id="first-name"/>
-                    <p>
-                        It is up to us to do something for the whales and the planet. A great deal of what is affecting
-                        the orcas can be fixed if we are all willing to make some changes at our homes. Investigate
-                        your ecological “foot print” by filling out the sheet below. Try your best and make changes
-                        where you can. Record the results and return them to your teacher by the due date. Remember,
-                        even a little change, when added to what everyone else is doing, can add up quickly.
+                    <p>With an adult, investigate your ecological “footprint” by filling out or
+                        circling the answers on the sheet below. Make changes where you can, record the results and
+                        return them to your teacher by the due date. Remember, even a little change, when added to what
+                        everyone else is doing, can add up quickly. Everyone who tries their best to complete this gets
+                        orca cards!
                     </p>
                 </div>
-                <div class="row">
-                    <div class="column padded bordered">
-                        <h3 class="question-header">Recycling Facts</h3>
-                        <p>
-                            Packaging alone makes up 64 million tons by weight or 33% of all of our garbage. Last year
-                            alone King County residents threw away 4 pounds of trash per person each day! Recycling one
-                            aluminum can saves enough electricity to power your television for 3 hours. That’s a lot of
-                            hydroelectric power saved, which means more safe habitat for salmon and more food for
-                            whales.
+                <div class="grid-container">
+                    <div class="column">
+                        <h3 class="question-header">RECYCLING AT HOME</h3>
+                        <p class="question-description">Fact: Recycling decreases emissions of greenhouse gases that
+                            contribute to global climate change and conserves natural resources such as timber and
+                            water, protecting salmon!
                         </p>
-                        <fieldset class="radiogroup">
-                            <legend class="question">Do you recycle?</legend>
+                        <fieldset class="question-set">
+                            <legend>Does your household currently recycle with a curbside recycling
+                                service and/or taking materials to a drop-off center?
+                            </legend>
+                            <input type="radio" name="do-you-recycle" id="do-you-recycle--yes" value="Yes">
+                            <label for="do-you-recycle--yes">Yes</label>
+                            <input type="radio" name="do-you-recycle" id="do-you-recycle--no" value="No">
+                            <label for="do-you-recycle--no">No</label>
+                        </fieldset>
+                        <fieldset class="question-set" id="recycle--yes--hidden" style="display: none">
+                            <legend> What types of materials do you currently recycle at home?</legend>
                             <div>
-                                <input type="radio" name="do-recycle" id="recycle-yes" value="Yes">
-                                <label for="recycle-yes">Yes</label>
+                                <input
+                                        type="checkbox"
+                                        name="recycle-type"
+                                        id="recycle-type--paper"
+                                        value="Paper / Newspaper / Cardboard"
+                                >
+                                <label for="recycle-type--paper">Paper / Newspaper / Cardboard</label>
                             </div>
-
                             <div>
-                                <input type="radio" name="do-recycle" id="recycle-started-today"
-                                       value="I started today">
-                                <label for="recycle-started-today">I started today</label>
+                                <input type="checkbox" name="recycle-type" id="recycle-type--plastics" value="Plastic">
+                                <label for="recycle-type--plastics">Plastic</label>
                             </div>
-
                             <div>
-                                <input type="radio" name="do-recycle" id="recycle-sorry"
-                                       value="Sorry, there are no recycling centers in our area">
-                                <label for="recycle-sorry">Sorry, there are no recycling centers in our area</label>
+                                <input type="checkbox" name="recycle-type" id="recycle-type--glass" value="Glass">
+                                <label for="recycle-type--glass">Glass</label>
+                            </div>
+                            <div>
+                                <input
+                                        type="checkbox" name="recycle-type" id="recycle-type--aluminum" value="Aluminum"
+                                >
+                                <label for="recycle-type--aluminum">Aluminum</label>
+                            </div>
+                            <div>
+                                <input
+                                        type="checkbox"
+                                        name="recycle-type"
+                                        id="recycle-type--other-metal"
+                                        value="Other Metal"
+                                >
+                                <label for="recycle-type--other-metal">Other Metal</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="recycle-type" id="recycle-type--other">
+                                <label for="recycle-type--other">Other</label>
+                            </div>
+                            <div id="recycle-type--other--hidden" style="display: none">
+                                <label for="recycle-type--other--value">Please describe</label>
+                                <input type="text" name="recycle-type" id="recycle-type--other--value">
                             </div>
                         </fieldset>
-                        <fieldset>
-                            <legend class="question">If so, what do you recycle? (check all that apply)</legend>
+                        <fieldset class="question-set" id="recycle--no--hidden" style="display: none">
+                            <legend>Would your family be willing to start recycling today?</legend>
+                            <input type="radio" name="willing-to-recycle" id="willing-to-recycle--yes" value="Yes">
+                            <label for="willing-to-recycle--yes">Yes, we will try from now on</label>
+                            <input type="radio" name="willing-to-recycle" id="willing-to-recycle--no" value="No">
+                            <label for="willing-to-recycle--no">No</label>
+                        </fieldset>
+                    </div>
+                    <div class="column">
+                        <h3 class="question-header">COMPOSTING: FOOD AND YARD WASTE</h3>
+                        <p class="question-description">Fact: Organic waste from decomposing food and yard trimmings in
+                            landfills generates methane, a potent greenhouse gas. By composting wasted food and other
+                            organic materials our methane emissions are significantly reduced which can help preserve
+                            our protective ozone layer and slow climate change.
+                        </p>
+                        <fieldset class="question-set">
+                            <legend>Do you compost your food scraps and/or yard waste at home?
+                            </legend>
+                            <input type="radio" name="do-you-compost" id="do-you-compost--yes" value="Yes">
+                            <label for="do-you-compost--yes">Yes</label>
+                            <input type="radio" name="do-you-compost" id="do-you-compost--no" value="No">
+                            <label for="do-you-compost--no">No</label>
+                        </fieldset>
+                        <fieldset class="question-set" id="compost--no--hidden" style="display: none">
+                            <legend>Would your family be willing to start composting today?</legend>
+                            <input type="radio" name="willing-to-compost" id="willing-to-compost--yes" value="Yes">
+                            <label for="willing-to-compost--yes">Yes, we will try from now on</label>
+                            <input type="radio" name="willing-to-compost" id="willing-to-compost--no" value="No">
+                            <label for="willing-to-compost--no">No</label>
+                        </fieldset>
+                    </div>
+                    <div class="column">
+                        <h3 class="question-header">ORGANIC FOOD = LESS POLLUTION</h3>
+                        <p class="question-description">Fact: Organic food has been grown or processed without synthetic
+                            pesticides, chemical fertilizers, irradiation, industrial solvents, or chemical food
+                            additives. These additives and byproducts from traditional agriculture and production
+                            processes can enter our water systems and cause harmful algae blooms and pollution in the
+                            ocean. Eating foods and using products that are organic can reduce the amount of pollution
+                            entering our water supply and oceans, saving our salmon and orcas.
+                        </p>
+                        <fieldset class="question-set">
+                            <legend>
+                                <img
+                                        src="images/USDA_organic_seal.svg"
+                                        alt="USDA organic seal"
+                                        height="64em"
+                                        class="image"
+                                >
+                                Do you use products and have food that has this symbol on the packaging/label?
+                            </legend>
                             <div>
-                                <input type="checkbox" name="recycle-type" id="recycle-paper" value="paper">
-                                <label for="recycle-paper">Paper</label>
+                                <input type="radio" name="use-organic" id="use-organic--yes" value="Yes">
+                                <label for="use-organic--yes">Yes, every item in our house is organic</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="recycle-type" id="recycle-plastics" value="plastics">
-                                <label for="recycle-plastics">Plastics</label>
+                                <input type="radio" name="use-organic" id="use-organic--some" value="Some">
+                                <label for="use-organic--some">Some things in our house are labeled organic</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="recycle-type" id="recycle-glass" value="glass">
-                                <label for="recycle-glass">Glass</label>
+                                <input type="radio" name="use-organic" id="use-organic--no" value="No">
+                                <label for="use-organic--no">No</label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="question-set" id="use-organic--no--hidden" style="display: none">
+                            <legend>On your next shopping trip can your family replace at least one of
+                                your normal purchases with an organic product?
+                            </legend>
+                            <div>
+                                <input
+                                        type="radio"
+                                        name="will-replace-organic"
+                                        id="will-replace-organic--yes"
+                                        value="Yes"
+                                >
+                                <label for="will-replace-organic--yes">Yes, we will try to swap in the organic version
+                                    from now on
+                                </label>
                             </div>
                             <div>
-                                <input type="checkbox"
-                                       name="recycle-type"
-                                       id="recycle-newspaper"
-                                       value="newspaper">
-                                <label for="recycle-newspaper">Newspaper</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="recycle-type" id="recycle-food" value="food">
-                                <label for="recycle-food">Food (worm bin?)</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="recycle-type" id="recycle-cans" value="cans">
-                                <label for="recycle-cans">Cans</label>
+                                <input
+                                        type="radio"
+                                        name="will-replace-organic"
+                                        id="will-replace-organic--no"
+                                        value="No"
+                                >
+                                <label for="will-replace-organic--no">No</label>
                             </div>
                         </fieldset>
                     </div>
-                    <div class="column padded bordered">
-                        <h3 class="question-header">Organic Food Facts</h3>
-                        <p>
-                            Organic food is produced using sustainable agricultural production practices. Not permitted
-                            are most conventional pesticides; fertilizers made with synthetic ingredients, or sewage
-                            sludge; bioengineering; or ionizing radiation. Organic meat, poultry eggs, and dairy
-                            products come from animals that are given no antibiotics or growth hormones. The USDA
-                            National Organic Program website has more information including inspection and
-                            certification information
+                    <div class="column">
+                        <h3 class="question-header">NO STRAW, NO THANK YOU</h3>
+                        <p class="question-description">Fact: 500 million straws are used and discarded every day in the
+                            United States alone. Plastics that end up as ocean debris contribute to habitat destruction
+                            and kill tens of thousands of marine animals each year.
                         </p>
-                        <fieldset>
-                            <legend class="question">
-                                Checkout the food in your fridge and kitchen cabinets. Do you use products that have
-                                this label on the packaging?
+                        <fieldset class="question-set">
+                            <legend>Will you commit to saying “no, thank you” to plastic straws the
+                                next time you are offered one?
                             </legend>
-                            <img src="images/USDA_organic_seal.svg" alt="USDA organic seal" width="50vw">
-                            <input type="radio" name="use-organic" id="organic-yes" value="Yes">
-                            <label for="organic-yes">Yes</label>
-                            <input type="radio" name="use-organic" id="organic-no" value="No">
-                            <label for="organic-no">No</label>
+                            <div>
+                                <input type="radio" name="straw" id="straw--never" value="Never Use">
+                                <label for="straw--never">I never use plastic straws</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="straw" id="straw--always" value="Always Refuse">
+                                <label for="straw--always">I will refuse the plastic straw from now on</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="straw" id="straw--next" value="Refuse Next Time">
+                                <label for="straw--next">I will refuse the next plastic straw that I am offered</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="straw" id="straw--no" value="No">
+                                <label for="straw--no">No</label>
+                            </div>
                         </fieldset>
-                        <fieldset>
-                            <legend class="question">
-                                On your next shopping trip can you replace at least one of your normal food purchases
-                                with an organic product?
+                    </div>
+                    <div class="column">
+                        <h3 class="question-header">UNDER INFLATED TIRES</h3>
+                        <p class="question-description">Fact: When tires are not inflated to the correct Pounds per
+                            Square Inch (PSI), they are less “round”and require more energy to begin moving and to
+                            maintain speed. As such, under-inflated tires do contribute to unnecessary pollution and
+                            increased fuel costs.
+                        </p>
+                        <fieldset class="question-set">
+                            <legend>Are the tires on your family motor vehicle(s) inflated to the
+                                correct PSI?
                             </legend>
-                            <input type="radio" name="will-replace-organic" id="shopping-yes" value="Yes">
-                            <label for="shopping-yes">Yes</label>
-                            <input type="radio" name="will-replace-organic" id="shopping-no" value="No">
-                            <label for="shopping-no">No</label>
-                            <input type="radio" name="will-replace-organic" id="shopping-will-now"
-                                   value="We will form now on">
-                            <label for="shopping-will-now">We will from now on</label>
+                            <div>
+                                <input type="radio" name="tires" id="tires--yes" value="Yes">
+                                <label for="tires--yes">Yes all tires already were properly inflated</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="tires" id="tires--inflated" value="Had To Inflate">
+                                <label for="tires--inflated">We had to inflate some or all of the tires to reach the
+                                    correct PSI
+                                </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="tires" id="tires--no" value="No">
+                                <label for="tires--no">No and we did not correct the problem</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="tires" id="tires--not-applicable" value="Not Applicable">
+                                <label for="tires--not-applicable">We do not have motor vehicles</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="column">
+                        <h3 class="question-header">RECYCLED AND CHLORINE FREE PAPER</h3>
+                        <p class="question-description"> Fact: If every household replaced one 12-pack of virgin
+                            fiber bathroom tissue with 100% recycled tissue we could save 4.4 million trees and
+                            avoid 275,000 pounds of pollution! More trees means more habitat for salmon!
+                        </p>
+                        <fieldset class="question-set">
+                            <legend>
+                                <img
+                                        src="images/Recycling_symbol.svg"
+                                        alt="Recycling symbol"
+                                        height="64em"
+                                        class="image"
+                                >
+                                Check the packaging on your paper products (paper towels, toilet paper, printer
+                                paper, school supplies, etc.). Do the say “chlorine free" and/or "made with post
+                                consumer” or have this symbol on the packaging/label?
+                            </legend>
+                            <div>
+                                <input type="radio" name="chlorine" id="chlorine--yes" value="Yes">
+                                <label for="chlorine--yes">Yes, all of our paper products are recycled and/or
+                                    chlorine free
+                                </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="chlorine" id="chlorine--some" value="Some">
+                                <label for="chlorine--some">Some things are recycled or chlorine free</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="chlorine" id="chlorine--none" value="None">
+                                <label for="chlorine--none">None of my paper products have these labels</label>
+                            </div>
+                            <div>
+                                <input
+                                        type="radio"
+                                        name="chlorine"
+                                        id="chlorine--not-applicable"
+                                        value="Not Applicable"
+                                >
+                                <label for="chlorine--not-applicable">We do not use any paper products at home; we
+                                    use washable rags for toilet paper and paper towels and do not print or draw on
+                                    paper
+                                </label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="question-set" id="chlorine--yes--hidden" style="display: none">
+                            <legend>What paper goods did you find that are made chlorine free or from post
+                                consumer/recycled materials?
+                            </legend>
+                            <div>
+                                <input
+                                        type="checkbox"
+                                        name="chlorine-type"
+                                        id="chlorine-type--toilet-paper"
+                                        value="Toilet Paper"
+                                >
+                                <label for="chlorine-type--toilet-paper">Toilet Paper</label>
+                            </div>
+                            <div>
+                                <input
+                                        type="checkbox"
+                                        name="chlorine-type"
+                                        id="chlorine-type--tissue"
+                                        value="Facial Tissue / Kleenex"
+                                >
+                                <label for="chlorine-type--tissue">Facial Tissue / Kleenex</label>
+                            </div>
+                            <div>
+                                <input
+                                        type="checkbox"
+                                        name="chlorine-type"
+                                        id="chlorine-type--paper-towel"
+                                        value="Paper Towels"
+                                >
+                                <label for="chlorine-type--paper-towel">Paper Towels</label>
+                            </div>
+                            <div>
+                                <input
+                                        type="checkbox"
+                                        name="chlorine-type"
+                                        id="chlorine-type--printer-paper"
+                                        value="Printer Paper"
+                                >
+                                <label for="chlorine-type--printer-paper">Printer Paper</label>
+                            </div>
+                            <div>
+                                <input
+                                        type="checkbox"
+                                        name="chlorine-type"
+                                        id="chlorine-type--notebook-paper"
+                                        value="Notebook Paper"
+                                >
+                                <label for="chlorine-type--notebook-paper">Notebook Paper</label>
+                            </div>
+                            <div>
+                                <input
+                                        type="checkbox"
+                                        name="chlorine-type"
+                                        id="chlorine-type--drawing-paper"
+                                        value="Drawing Paper"
+                                >
+                                <label for="chlorine-type--drawing-paper">Drawing Paper</label>
+                            </div>
+                            <div>
+                                <input
+                                        type="checkbox"
+                                        name="chlorine-type"
+                                        id="chlorine-type--paper-plates"
+                                        value="Paper Plates"
+                                >
+                                <label for="chlorine-type--paper-plates">Paper Plates</label>
+                            </div>
+                            <div>
+                                <input
+                                        type="checkbox"
+                                        name="chlorine-type"
+                                        id="chlorine-type--paper-napkins"
+                                        value="Paper Napkins"
+                                >
+                                <label for="chlorine-type--paper-napkins">Paper Napkins</label>
+                            </div>
+                            <div>
+                                <input
+                                        type="checkbox"
+                                        name="chlorine-type"
+                                        id="chlorine-type--wet-wipes"
+                                        value="Wet Wipes"
+                                >
+                                <label for="chlorine-type--wet-wipes">Wet Wipes</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="chlorine-type" id="chlorine-type--other">
+                                <label for="chlorine-type--other">Other</label>
+                            </div>
+                            <div id="chlorine-type--other--hidden" style="display: none">
+                                <label for="chlorine-type--other--value">Please describe</label>
+                                <input type="text" name="chlorine-type" id="chlorine-type--other--value">
+                            </div>
+                        </fieldset>
+                        <fieldset class="question-set" id="chlorine--no--hidden" style="display: none">
+                            <legend>On your next shopping trip can you replace at least one of your normal paper
+                                purchase with a chlorine-free/recycled product?
+                            </legend>
+                            <input
+                                    type="radio"
+                                    name="willing-to-chlorine-free"
+                                    id="willing-to-chlorine-free--yes"
+                                    value="Yes"
+                            >
+                            <label for="willing-to-chlorine-free--yes">Yes</label>
+                            <input
+                                    type="radio"
+                                    name="willing-to-chlorine-free"
+                                    id="willing-to-chlorine-free--no"
+                                    value="No"
+                            >
+                            <label for="willing-to-chlorine-free--no">No</label>
                         </fieldset>
                     </div>
                 </div>
-                <div class="padded bordered">
-                    <h3 class="question-header">Recycle/Chlorine Paper Facts</h3>
-                    <p>
-                        If every household in the US replaced just <strong>one</strong> 12 pack of virgin fiber
-                        bathroom tissue with 100% recycled ones we could save 4.4 million trees and avoid 275,000
-                        pounds of pollution! More trees means more habitat for salmon, which are orcas’ main food
-                        source. Bleaching paper with chlorine compounds to make it whiter is one of the largest
-                        causes of toxic pollution in Washington State. This toxic contaminant is called Dioxin and is
-                        one of the most toxic chemicals known to man. Dioxin causes all sorts of immunological and
-                        reproductive problems in mammals.
-                    </p>
-                    <fieldset>
-                        <legend class="question">
-                            Check the packaging on the paper products in your home. Do the products you use say
-                            “chlorine free/ made with post consumer” or have this label on the packaging?
-                        </legend>
-                        <img src="images/Recycling_symbol.svg" alt="Recycling symbol" width="50vw">
-                        <input type="radio" name="use-chlorine-free" id="chlorine-free-yes" value="Yes">
-                        <label for="chlorine-free-yes">Yes</label>
-                        <input type="radio" name="use-chlorine-free" id="chlorine-free-no" value="No">
-                        <label for="chlorine-free-no">No</label>
-                    </fieldset>
-                    <fieldset>
-                        <legend class="question">
-                            On your next shopping trip can you replace at least one of your normal paper purchase
-                            with a chlorine free/recycled product?
-                        </legend>
-                        <input type="radio" name="will-replace-chlorine" id="replace-chlorine-yes" value="Yes">
-                        <label for="replace-chlorine-yes">Yes</label>
-                        <input type="radio" name="will-replace-chlorine" id="replace-chlorine-no" value="No">
-                        <label for="replace-chlorine-no">No</label>
-                        <input type="radio" name="will-replace-chlorine" id="replace-chlorine-will-now"
-                               value="We will from now on">
-                        <label for="replace-chlorine-will-now">We will from now on</label>
-                    </fieldset>
-                </div>
-            </form>
-        </div>
+            </div>
+        </form>
+        <footer>
+            <script type="text/javascript" src="js/recycling.js"></script>
+            <script type="text/javascript" src="js/composting.js"></script>
+            <script type="text/javascript" src="js/organic.js"></script>
+            <script type="text/javascript" src="js/chlorine.js"></script>
+        </footer>
     </body>
 </html>
