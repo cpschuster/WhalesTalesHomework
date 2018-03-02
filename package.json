@@ -1,0 +1,22 @@
+{
+  "name": "whalestaleshomework",
+  "version": "1.0.0",
+  "description": "Prototype for electronic submission of the questions present here: http://www.killerwhaletales.org/pdfs/registration2010.pdf",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cpschuster/WhalesTalesHomework.git"
+  },
+  "author": "Christopher Schuster",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/cpschuster/WhalesTalesHomework/issues"
+  },
+  "homepage": "https://github.com/cpschuster/WhalesTalesHomework#readme",
+  "dependencies": {
+    "inliner": "^1.13.1"
+  }
+}
